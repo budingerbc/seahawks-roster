@@ -1,3 +1,12 @@
 .showEditorButton {
   float: right;
 }
+
+.card {
+  margin: 10px 0px;
+}
+
+h2 {
+  margin: 30px;
+  text-align: center;
+}

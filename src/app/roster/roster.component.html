@@ -1,21 +1,25 @@
 <h2>Team Roster</h2>
 
-<div *ngFor="let player of roster | async" class="card" style="width: 20rem;">
-  <img class="card-img-top" src="https://images6.alphacoders.com/414/414474.jpg" alt="Card image cap">
-  <div class="card-body">
-    <div *ngIf="currentRoute === '/admin'">
-      <span class="showEditorButton">
-        <button type="button" (click)="toggleEditor()" class="btn btn-warning">Edit</button>
-      </span>
-    </div>
-    <h4 class="card-title">
-      <a href="javascript:void(0)" (click)="goToPlayerDetailsPage(player)">{{player.firstName}} {{player.lastName}}</a>
-    </h4>
-    <h6>#{{player.jerseyNumber}} | {{player.position}}</h6>
+<div class="row">
+  <div *ngFor="let player of roster | async" class="col-md-4">
+    <div  class="card" style="width: 20rem;">
+      <img class="card-img-top" src="https://images6.alphacoders.com/414/414474.jpg" alt="Card image cap">
+      <div class="card-body">
+        <div *ngIf="currentRoute === '/admin'">
+          <span class="showEditorButton">
+            <button type="button" (click)="toggleEditor()" class="btn btn-warning">Edit</button>
+          </span>
+        </div>
+        <h4 class="card-title">
+          <a href="javascript:void(0)" (click)="goToPlayerDetailsPage(player)">{{player.firstName}} {{player.lastName}}</a>
+        </h4>
+        <h6>#{{player.jerseyNumber}} | {{player.position}}</h6>
 
-    <div *ngIf="currentRoute === '/admin' && showEditor === true">
-      <hr>
-      <app-edit-player [selectedPlayer]="player"></app-edit-player>
+        <div *ngIf="currentRoute === '/admin' && showEditor === true">
+          <hr>
+          <app-edit-player [selectedPlayer]="player"></app-edit-player>
+        </div>
+      </div>
     </div>
   </div>
 </div>
