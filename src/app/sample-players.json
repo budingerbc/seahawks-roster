@@ -1,0 +1,22 @@
+{ "roster": [{
+    "firstName": "Russel",
+    "lastName": "Wilson",
+    "jerseyNumber": 3,
+    "position": "QB"
+    }, {
+    "firstName": "Richard",
+    "lastName": "Sherman",
+    "jerseyNumber": 25,
+    "position": "CB"
+    }, {
+    "firstName": "Kam",
+    "lastName": "Chancellor",
+    "jerseyNumber": 31,
+    "position": "SS"
+  }, {
+    "firstName": "Jimmy",
+    "lastName": "Graham",
+    "jerseyNumber": 88,
+    "position": "TE"
+  }]
+}
