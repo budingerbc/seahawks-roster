@@ -1,3 +1,7 @@
-<p>
-  roster works!
-</p>
+<h2>Team Roster</h2>
+
+<div *ngFor="let player of roster | async" (click)="goToDetailPage(player)" class="panel panel-default">
+  <div class="panel-body">
+    <h3>{{player.firstName}} {{player.lastName}}</h3>
+  </div>
+</div>
