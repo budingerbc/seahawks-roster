@@ -14,6 +14,7 @@ import { FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/d
 export class RosterComponent implements OnInit {
   roster: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
+  showEditor = false;
 
   constructor(private router: Router, private rosterService: RosterService) {}
 
@@ -23,6 +24,15 @@ export class RosterComponent implements OnInit {
 
   goToPlayerDetailsPage(clickedPlayer) {
     this.router.navigate(['roster', clickedPlayer.$key]);
+  }
+
+  toggleEditor(value: number) {
+    if (this.showEditor) {
+      this.showEditor = false;
+    } else {
+      this.showEditor = true;
+    }
+    console.log(value);
   }
 
 }
