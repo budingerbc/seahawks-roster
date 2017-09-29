@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Player } from '../player.model';
 import { Router } from '@angular/router';
 import { RosterService } from '../roster.service';
-import { FirebaseListObservable } from 'angularfire2/database';
+import { FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
 
 
 @Component({
@@ -13,6 +13,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 export class RosterComponent implements OnInit {
   roster: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
 
   constructor(private router: Router, private rosterService: RosterService) {}
 
@@ -20,8 +21,8 @@ export class RosterComponent implements OnInit {
     this.roster = this.rosterService.getRoster();
   }
 
-  goToPlayerDetailPage(clickedPlayer: Player) {
-    this.router.navigate(['roster'])
+  goToPlayerDetailsPage(clickedPlayer) {
+    this.router.navigate(['roster', clickedPlayer.$key]);
   }
 
 }

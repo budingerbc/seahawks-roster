@@ -14,4 +14,26 @@ export class RosterService {
     return this.roster;
   }
 
+  addPlayer(newPlayer: Player) {
+    this.roster.push(newPlayer);
+  }
+
+  getPlayerByKey(key: string) {
+    return this.database.object('roster/' + key);
+
+  }
+
+  updatePlayer(localPlayer) {
+    const playerEntryInFirebase = this.getPlayerByKey(localPlayer.$key);
+    playerEntryInFirebase.update({firstName: localPlayer.firstName,
+                                  lastName: localPlayer.lastName,
+                                  jerseyNumber: localPlayer.jerseyNumber,
+                                  position: localPlayer.position});
+  }
+
+  deletePlayer(player) {
+    const playerEntryInFirebase = this.getPlayerByKey(player.$key);
+    playerEntryInFirebase.remove();
+  }
+
 }

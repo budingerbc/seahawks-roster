@@ -1,0 +1,19 @@
+<h4>Edit Album</h4>
+
+<label>First Name:</label>
+<input [(ngModel)]="selectedPlayer.firstName">
+<br>
+
+<label>First Name:</label>
+<input [(ngModel)]="selectedPlayer.lastName">
+<br>
+
+<label>Jersey Number:</label>
+<input [(ngModel)]="selectedPlayer.jerseyNumber">
+
+<label>Position:</label>
+<input [(ngModel)]="selectedPlayer.position">
+
+<button (click)="beginUpdatingPlayer(selectedPlayer)" class="btn btn-info">Update</button>
+<hr>
+<button (click)="beginDeletingPlayer(selectedPlayer)" class="btn btn-danger">Delete</button>
