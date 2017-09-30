@@ -1,19 +1,19 @@
-<h4>Edit Album</h4>
+<h4>Edit Player</h4>
 
 <label>First Name:</label>
-<input [(ngModel)]="selectedPlayer.firstName">
+<input [(ngModel)]="selectedPlayer.firstName" class="form-control">
 <br>
 
 <label>First Name:</label>
-<input [(ngModel)]="selectedPlayer.lastName">
+<input [(ngModel)]="selectedPlayer.lastName" class="form-control">
 <br>
 
 <label>Jersey Number:</label>
-<input [(ngModel)]="selectedPlayer.jerseyNumber">
+<input [(ngModel)]="selectedPlayer.jerseyNumber" class="form-control">
 
 <label>Position:</label>
-<input [(ngModel)]="selectedPlayer.position">
+<input [(ngModel)]="selectedPlayer.position" class="form-control">
 
-<button (click)="beginUpdatingPlayer(selectedPlayer)" class="btn btn-info">Update</button>
+<button (click)="beginUpdatingPlayer(selectedPlayer)" class="btn btn-info btn-block">Update</button>
 <hr>
-<button (click)="beginDeletingPlayer(selectedPlayer)" class="btn btn-danger">Delete</button>
+<button (click)="beginDeletingPlayer(selectedPlayer)" class="btn btn-danger btn-block">Delete</button>

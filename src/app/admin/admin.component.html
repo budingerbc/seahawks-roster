@@ -1,33 +1,31 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Add Player to Roster</h3>
-  </div>
-  <div class="panel-body">
-    <div>
+<div class="center-card">
+  <div class="card" style="width: 20rem;">
+    <h4 class="panel-title">Add Player to Roster</h4>
+    <div class="card-body">
       <div>
         <label>First Name:</label>
         <br>
-        <input #firstName>
+        <input #firstName class="form-control">
       </div>
 
       <div>
         <label>Last Name:</label>
         <br>
-        <input #lastName>
+        <input #lastName class="form-control">
       </div>
 
       <div>
         <label>Jersey Number:</label>
         <br>
-        <input #jerseyNumber>
+        <input #jerseyNumber class="form-control">
       </div>
 
       <div>
         <label>Position:</label>
         <br>
-        <input #position>
+        <input #position class="form-control">
       </div>
-      <button (click)="submitNewPlayerForm(firstName.value, lastName.value, jerseyNumber.value, position.value)" class="btn btn-success">Add!</button>
+      <button (click)="submitNewPlayerForm(firstName.value, lastName.value, jerseyNumber.value, position.value)" class="btn btn-success btn-block">Add!</button>
     </div>
   </div>
 </div>

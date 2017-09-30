@@ -10,6 +10,7 @@ import { RosterService } from '../roster.service';
 })
 export class EditPlayerComponent implements OnInit {
   @Input() selectedPlayer;
+  disableEditForm = true;
 
   constructor(private rosterService: RosterService) { }
 
@@ -24,6 +25,7 @@ export class EditPlayerComponent implements OnInit {
     const confirmRemoval = "Remove " + player.firstName + " " + player.lastName + "?";
     if(confirm(confirmRemoval)) {
       this.rosterService.deletePlayer(player);
+      this.disableEditForm = true;
       console.log(player.firstName);
     }
 

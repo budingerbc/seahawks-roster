@@ -1,0 +1,18 @@
+.btn {
+  margin: 10px 0px;
+}
+
+.card {
+  margin: 20px;
+  display: inline-block;
+  background-color: #A5ACAF;
+}
+
+.center-card {
+  text-align: center;
+}
+
+.card h4 {
+  text-align: center;
+  margin: 5px;
+}

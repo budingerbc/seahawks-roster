@@ -2,7 +2,7 @@
 
 <div class="row">
   <div *ngFor="let player of roster | async" class="col-md-4">
-    <div  class="card" style="width: 20rem;">
+    <div class="card" style="width: 20rem;">
       <img class="card-img-top" src="https://images6.alphacoders.com/414/414474.jpg" alt="Card image cap">
       <div class="card-body">
         <div *ngIf="currentRoute === '/admin'">
